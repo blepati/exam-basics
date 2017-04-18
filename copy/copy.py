@@ -12,5 +12,17 @@ import sys
 def print_description():
     print("copy [source] [destination]")
 
+def warning_message():
+    print("No destination provided")
 
-print_description()
+def copy_mechanism():
+    pass
+
+def controller(arg):
+    if len(sys.argv) == 2:
+        warning_message()
+    else:
+        print_description()
+
+
+controller(sys.argv)
