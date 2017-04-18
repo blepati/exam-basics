@@ -17,12 +17,21 @@ class Card(object):
         self.color = ["Club", "Diamond", "Heart", "Spade"]
         self.value = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 
-    def check_card(self):
+    def create_one_card(self):
         card = random.sample(self.color, 1) + random.sample(self.value, 1)
-        print(card)
+        return card
+        
+    def draw_one_card(self):
+        card = self.create_one_card()
+        print(card[0] +" " + card[1])
+
+class Deck(object):
+    def __init__(self):
+        self.list_of_cards = []
+        num_of_cards = 0
 
 cards = Card()
-cards.check_card()
+cards.draw_one_card()
 #deck = Deck(12)
 #print(deck)
 # Should print out:
