@@ -20,20 +20,32 @@ class Card(object):
     def create_one_card(self):
         card = random.sample(self.color, 1) + random.sample(self.value, 1)
         return card
-        
+
     def draw_one_card(self):
         card = self.create_one_card()
         print(card[0] +" " + card[1])
 
 class Deck(object):
-    def __init__(self):
+    def __init__(self, num_of_cards):
         self.list_of_cards = []
-        num_of_cards = 0
+        self.num_of_cards = num_of_cards
+        self.cards = Card()
 
-cards = Card()
-cards.draw_one_card()
-#deck = Deck(12)
-#print(deck)
+    def create_deck(self):
+        for card in range(self.num_of_cards):
+            self.list_of_cards.append(self.cards.create_one_card())
+
+    def shuffle_deck(self):
+        shuffled_deck = random.shuffle(self.list_of_cards)
+        return shuffled_deck
+
+#cards = Card()
+#cards.draw_one_card()
+deck = Deck(12)
+deck.create_deck()
+print(deck.list_of_cards)
+deck.shuffle_deck()
+print(deck.list_of_cards)
 # Should print out:
 # 12 cards -  3 Clubs, 3 Diamonds, 3 Hearts, 3 Spades
 #top_card = deck.draw()
