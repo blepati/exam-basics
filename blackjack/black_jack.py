@@ -10,6 +10,17 @@
 # We should be able to draw the top card which returns the drawn card and also removes it from the deck
 # Deck should be represented as string in this format:
 # 12 cards -  3 Clubs, 3 Diamonds, 3 Hearts, 3 Spades
+import random
+
+class Card(object):
+    def __init__(self, color, value):
+        self.color = ["Club", "Diamond", "Heart", "Spade"]
+        self.value = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+
+    def check_card(self):
+        
+
+
 deck = Deck(12)
 print(deck)
 # Should print out:
