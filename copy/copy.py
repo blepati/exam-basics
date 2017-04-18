@@ -15,8 +15,20 @@ def print_description():
 def warning_message():
     print("No destination provided")
 
-def copy_mechanism():
-    pass
+"""def content_to_copy():
+    source =  sys.argv[2]
+    try:
+        content = open("source", "r")
+        text = content.readlines()
+        content.close()
+        return text
+    except FileNotFoundError:
+        print("I can't find your file")
+
+def paste_the_content():
+    destination = sys.argv[3]
+    destination.write(content_to_copy(text))"""
+
 
 def controller(arg):
     if len(sys.argv) == 2:
