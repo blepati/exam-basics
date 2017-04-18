@@ -36,14 +36,14 @@ The application is accepted if:
 
 #### Your answer:
 [add your answer here]   
-1:   
-2:   
-3:   
-4:   
-5:   
-6:   
-7:   
+1:   method statement
+2:   name of the function
+3:   argument(parameter from the scope)
+4:   block
+5:   a variable in the scope
+6:   return statement
+7:   return value
 
 ### What is the constructor? When it is used? [2p]
 #### Your answer:
-[add your answer here]
+[the constructor is an inner function of a class, where you can declare variables , that define that class every time, when you instantiate your class ]
