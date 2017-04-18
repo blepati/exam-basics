@@ -13,21 +13,23 @@
 import random
 
 class Card(object):
-    def __init__(self, color, value):
+    def __init__(self):
         self.color = ["Club", "Diamond", "Heart", "Spade"]
         self.value = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
 
     def check_card(self):
-        
+        card = random.sample(self.color, 1) + random.sample(self.value, 1)
+        print(card)
 
-
-deck = Deck(12)
-print(deck)
+cards = Card()
+cards.check_card()
+#deck = Deck(12)
+#print(deck)
 # Should print out:
 # 12 cards -  3 Clubs, 3 Diamonds, 3 Hearts, 3 Spades
-top_card = deck.draw()
-print(top_card)
-print(deck)
+#top_card = deck.draw()
+#print(top_card)
+#print(deck)
 # Should print out:
 # Queen Spades
 # 11 cards - 3 Clubs, 3 Diamonds, 3 Hearts, 2 Spades
