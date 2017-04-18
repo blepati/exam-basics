@@ -6,3 +6,11 @@
 # No destination provided
 # When both arguments provided and the source is a file
 # Read all contents from it and write it to the destination
+
+import sys
+
+def print_description():
+    print("copy [source] [destination]")
+
+
+print_description()
